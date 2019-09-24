@@ -285,6 +285,7 @@ table {
         opacity: 1;
         transform: translateY(0);
     }
+
     to {
         opacity: 0.1;
         transform: translateY(-1rem);
@@ -389,3 +390,177 @@ table {
 
 
 /* 第六个玩意结束 */
+
+/* 第七个玩意开始 */
+.seven {
+    align-items: initial;
+    justify-content: initial;
+}
+
+.p-text {
+    font-size: 12px;
+    padding: 20px;
+}
+
+.seven-box {
+    width: 100%;
+    height: 140px;
+    position: relative;
+    overflow: hidden;
+}
+
+.seven-bg {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 50px);
+    visibility: hidden;
+    opacity: 0;
+    transition: .3s;
+    background: #000;
+}
+
+.seven-box .seven-header {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    background: #212121;
+    color: #fff;
+    z-index: 10;
+    justify-content: center;
+    align-items: center;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.seven-menu {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 11;
+    -webkit-appearance: none;
+    border: 0;
+    background: transparent;
+    border-radius: 0;
+    height: 50px;
+    width: 30px;
+    cursor: pointer;
+    pointer-events: auto;
+    margin-left: 25px;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.seven-menu .icon-bar {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: #aaa;
+    transition: .3s;
+}
+
+.icon-bar+.icon-bar {
+    margin-top: 5px;
+}
+
+.seven-navbar {
+    margin-top: 50px;
+    padding: 20px;
+    width: 20%;
+    max-width: 300px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: calc(100% - 50px);
+    background: #ececec;
+    pointer-events: auto;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    transform: translateX(-100%);
+    transition: transform .3s;
+    will-change: transform;
+    contain: paint;
+}
+
+.seven-box:focus-within .seven-bg {
+    visibility: visible;
+    opacity: .6;
+}
+
+.seven-box:focus-within .icon-bar:nth-of-type(1) {
+    transform: translate3d(0, 8px, 0) rotate(45deg);
+}
+
+.seven-box:focus-within .icon-bar:nth-of-type(2) {
+    opacity: 0;
+}
+
+.seven-box:focus-within .icon-bar:nth-of-type(3) {
+    transform: translate3d(0, -8px, 0) rotate(-45deg);
+}
+
+.seven-box:focus-within .seven-navbar {
+    transform: none;
+}
+
+/* 第七个玩意结束 */
+
+/* 第八个玩意开始 */
+.eight-box {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    height: 60px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.g_input_search {
+    padding: 0 15px;
+    height: 100%;
+    width: 100%;
+    border: 1px solid #ccc;
+    font-size: 18px;
+    box-sizing: border-box;
+    padding-right: 40px;
+}
+
+.g_input_search:not(:placeholder-shown) {
+    border: 1px solid #03a9f4;
+}
+
+.g_input_search:not(:placeholder-shown)+.g_button_search {
+    opacity: 1;
+}
+
+.g_input_search:placeholder-shown+.g_button_search {
+    opacity: 0;
+}
+.g_button_search {
+    border: none;
+    outline: none;
+    background: #03a9f4;
+    color: #feffd4;
+    font-size: 15px;
+    cursor: pointer;
+    width: 50px;
+    height: calc(100% - 20px);
+    transition: 0.3s;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+.g_button_search:focus-within {
+    transform: translateY(-4px);
+    border-color: #bbb;
+    box-shadow: 4px 4px 10px 2px #ddd;
+}
+
+/* 第八个玩意结束 */
+
+
+/* 第九个玩意开始 */
+
+/* 第九个玩意结束 */
